@@ -37,3 +37,5 @@ for res in stub.WaitCompute(wait):
         print("Compute completed successfully")
         print(f"Consensus: {res.consensus}")
         print(f"Influence: {res.influence}")
+        print(f"Iteration: {res.iteration}")
+        print(f"Did Converge: {res.did_converge}")
