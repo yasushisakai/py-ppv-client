@@ -39,3 +39,8 @@ for res in stub.WaitCompute(wait):
         print(f"Influence: {res.influence}")
         print(f"Iteration: {res.iteration}")
         print(f"Did Converge: {res.did_converge}")
+        break  # Exit the loop after receiving FINISHED status
+    elif res.status == ppv.ComputeStatus.QUEUED:
+        print("Job is queued...")
+    elif res.status == ppv.ComputeStatus.PROCESSING:
+        print("Job is being processed...")
